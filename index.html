@@ -347,10 +347,7 @@ html.light-theme .per-pupil-cards .card { background: var(--surface); border-col
 html.light-theme .staffing-trends-bars { background: var(--surface); border-color: var(--border); }
 
 /* Tab Section Nav */
-html.light-theme .tab-section-nav { background: rgba(248,250,252,0.97); border-color: var(--border); }
-html.light-theme .tab-section-nav a { background: var(--surface2); color: var(--text-muted); }
-html.light-theme .tab-section-nav a:hover { background: var(--accent); color: #fff; }
-html.light-theme .insight-box { background: rgba(2,132,199,0.04); border-left-color: var(--accent); }
+html.light-theme html.light-theme html.light-theme html.light-theme .insight-box { background: rgba(2,132,199,0.04); border-left-color: var(--accent); }
 html.light-theme .insight-box.warning { background: rgba(234,88,12,0.06); border-left-color: var(--orange); }
 html.light-theme .takeaway-box { background: rgba(2,132,199,0.04); border-left-color: var(--accent); }
 html.light-theme .disclaimer-banner { background: #fffbeb; border-color: #d97706; color: #92400e; }
@@ -659,9 +656,7 @@ html.light-theme .glossary-modal { background: var(--surface); border-color: var
   .demo-cards { grid-template-columns: 1fr 1fr !important; }
   .per-pupil-cards { grid-template-columns: 1fr 1fr !important; }
   .org-chart-svg-wrap { overflow-x: auto; }
-  .tab-section-nav { padding: 6px 8px; }
-  .tab-section-nav a { font-size: 0.72rem; padding: 6px 12px; min-height: 44px; display: flex; align-items: center; }
-  .peer-bar-label { min-width: 80px; font-size: 0.7rem; }
+      .peer-bar-label { min-width: 80px; font-size: 0.7rem; }
   .levy-impact-row { flex-wrap: wrap; }
   .levy-impact-row .li-amount { width: auto; text-align: left; padding-left: 48px; }
   .about-dashboard-content { padding: 18px 16px; }
@@ -707,8 +702,7 @@ html.light-theme .glossary-modal { background: var(--surface); border-color: var
   .back-to-top:active { transform: scale(0.9); }
   .nav-card:active { transform: scale(0.97); border-color: var(--accent); }
   .sim-reset:active { opacity: 0.7; }
-  .tab-section-nav a:active { opacity: 0.7; }
-  .drawer-close:active { opacity: 0.7; }
+    .drawer-close:active { opacity: 0.7; }
   .methodology-toggle:active { opacity: 0.8; }
   .about-dashboard-toggle:active { opacity: 0.8; }
   .freshness-badge:focus .freshness-tooltip,
@@ -875,27 +869,12 @@ table th.sortable-peer { cursor: pointer; user-select: none; }
 table th.sortable-peer:hover { color: var(--accent); }
 
 /* Within-Tab Section Navigation */
-.tab-section-nav {
-  display: flex; gap: 8px; overflow-x: auto; padding: 8px 4px;
-  position: sticky; top: 0; z-index: 5;
-  background: rgba(15,23,42,0.95);
-  border-bottom: 1px solid var(--border); margin-bottom: 16px;
-}
-.tab-section-nav a {
-  padding: 4px 12px; border-radius: 16px; font-size: 0.75rem;
-  background: var(--surface2); color: var(--text-muted);
-  text-decoration: none; white-space: nowrap; transition: background 0.2s, color 0.2s;
-  flex-shrink: 0;
-}
-.tab-section-nav a:hover { background: var(--accent); color: #fff; }
 
 /* Chart Source Citations */
 .chart-source { font-size: 0.65rem; color: var(--text-muted); text-align: right; margin-top: 4px; font-style: italic; }
 
 @media print {
-  .tab-section-nav { position: static; display: flex; flex-wrap: wrap; border: 1px solid #ccc; padding: 8px; margin-bottom: 12px; }
-  .tab-section-nav::before { content: 'Contents: '; font-weight: bold; margin-right: 8px; }
-}
+    }
 
 /* Print/PDF enhancements */
 @media print {
@@ -1364,13 +1343,7 @@ button, [role="tab"], [role="button"], .clickable-row, a, input, select {
 
 <!-- TAB: Debt & Capital -->
 <div id="tab-debt" role="tabpanel" aria-labelledby="tab-btn-debt" style="display:none;">
-  <nav class="tab-section-nav" aria-label="Debt & Capital sections">
-    <a href="#debt-service">Debt Service</a>
-    <a href="#debt-capital">Capital Projects</a>
-    <a href="#debt-levy">Levy Info</a>
-    <a href="#debt-bonds">Bond Schedule</a>
-    <a href="#debt-cip">Capital Plan</a>
-  </nav>
+
   <div style="margin-bottom:12px;"><button class="export-btn" onclick="exportDebtCSV()" aria-label="Export Debt data as CSV">Export CSV</button></div>
   <div id="debtCards" class="summary-row"></div>
   <div class="chart-container" id="debt-service">
@@ -1399,18 +1372,7 @@ button, [role="tab"], [role="button"], .clickable-row, a, input, select {
 
 <!-- TAB: Budget Trends -->
 <div id="tab-trends" role="tabpanel" aria-labelledby="tab-btn-trends" style="display:none;">
-  <nav class="tab-section-nav" aria-label="Budget Trends sections">
-    <a href="#trends-revenue">Revenue Trend</a>
-    <a href="#trends-expenditure">Expenditure Trend</a>
-    <a href="#trends-fund-balance">Fund Balance</a>
-    <a href="#trends-key-metrics">Key Metrics</a>
-    <a href="#trends-per-pupil">Per-Pupil Trends</a>
-    <a href="#trends-variance">Variance Analysis</a>
-    <a href="#trends-scorecard">Health Scorecard</a>
-    <a href="#trends-strategic">Strategic Plan</a>
-    <a href="#trends-fiscal">Fiscal Policies</a>
-    <a href="#trends-forecast">Five-Year Forecast</a>
-  </nav>
+
   <div id="trendCards" class="summary-row"></div>
   <div class="chart-container" id="trends-revenue">
     <h2>3-Year Revenue Trend</h2>
